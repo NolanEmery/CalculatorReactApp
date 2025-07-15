@@ -9,6 +9,7 @@ export default function Button({ handleClick, str }) {
             {(str == "Multiplication") && "*"}
             {(str == "Division") && "/"}
             {(str == "Equals") && "="}
+            {(str == "Mod") && "%"}
         </button>
     );
 }
