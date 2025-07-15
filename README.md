@@ -6,5 +6,4 @@ Instructions:
 3. Open in IDE.
 4. cd into "CalculatorReactApp-Main".
 5. Run "npm install".
-6. Run "npm run start".
 7. Run "npm run dev".
