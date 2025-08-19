@@ -264,372 +264,372 @@ export default function Home() {
 
   return (
     <>
-    <h1>Calculator App</h1>
-    <table>
-    {/* <tr>
+      <h1>CalculatorReactApp</h1>
+      <table>
+        {/* <tr>
     <Row number={1} />
     </tr> */}
-    <tr>
-    <div>
-    <input value={allValues1.input1Value} onChange={e => {
-      dispatch1({
-        type: 'input1Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-      setSelectValue1(1);
-    }} str="Addition"></Button>
-    <Button handleClick={() => {
-      setSelectValue1(2);
-    }} str="Subtraction"></Button>
-    <Button handleClick={() => {
-      setSelectValue1(3);
-    }} str="Multiplication"></Button>
-    <Button handleClick={() => {
-      setSelectValue1(4);
-    }} str="Division"></Button>
-    <Button handleClick={() => {
-      setSelectValue1(5);
-    }} str="Mod"></Button>
-    <input value={allValues1.input2Value} onChange={e => {
-      dispatch1({
-        type: 'input2Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-        if (selectValue1 == 1) {
-          dispatch1({
-            type: 'resultValue',
-            value: (Number)(allValues1.input1Value) + (Number)(allValues1.input2Value)
-          });
-        } else if (selectValue1 == 2) {
-          dispatch1({
-            type: 'resultValue',
-            value: (Number)(allValues1.input1Value) - (Number)(allValues1.input2Value)
-          });
-        } else if (selectValue1 == 3) {
-          dispatch1({
-            type: 'resultValue',
-            value: (Number)(allValues1.input1Value) * (Number)(allValues1.input2Value)
-          });
-        } else if (selectValue1 == 4) {
-          dispatch1({
-            type: 'resultValue',
-            value: (Number)(allValues1.input1Value) / (Number)(allValues1.input2Value)
-          });
-        } else if (selectValue1 == 5) {
-          dispatch1({
-            type: 'resultValue',
-            value: (Number)(allValues1.input1Value) % (Number)(allValues1.input2Value)
-          });
-        }
-    }} str="Equals"></Button>
-    <input className="final" value={allValues1.resultValue} readOnly={true}></input>
-    </div>
-    </tr>
-    <tr>
-    <div>
-    <input value={allValues2.input1Value} onChange={e => {
-      dispatch2({
-        type: 'input1Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-      setSelectValue2(1);
-    }} str="Addition"></Button>
-    <Button handleClick={() => {
-      setSelectValue2(2);
-    }} str="Subtraction"></Button>
-    <Button handleClick={() => {
-      setSelectValue2(3);
-    }} str="Multiplication"></Button>
-    <Button handleClick={() => {
-      setSelectValue2(4);
-    }} str="Division"></Button>
-      <Button handleClick={() => {
-      setSelectValue2(5);
-    }} str="Mod"></Button>
-    <input value={allValues2.input2Value} onChange={e => {
-      dispatch2({
-        type: 'input2Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-        if (selectValue2 == 1) {
-          dispatch2({
-            type: 'resultValue',
-            value: (Number)(allValues2.input1Value) + (Number)(allValues2.input2Value)
-          });
-        } else if (selectValue2 == 2) {
-          dispatch2({
-            type: 'resultValue',
-            value: (Number)(allValues2.input1Value) - (Number)(allValues2.input2Value)
-          });
-        } else if (selectValue2 == 3) {
-          dispatch2({
-            type: 'resultValue',
-            value: (Number)(allValues2.input1Value) * (Number)(allValues2.input2Value)
-          });
-        } else if (selectValue2 == 4) {
-          dispatch2({
-            type: 'resultValue',
-            value: (Number)(allValues2.input1Value) / (Number)(allValues2.input2Value)
-          });
-        } else if (selectValue2 == 5) {
-          dispatch2({
-            type: 'resultValue',
-            value: (Number)(allValues2.input1Value) % (Number)(allValues2.input2Value)
-          });
-        }
-    }} str="Equals"></Button>
-    <input className="final" value={allValues2.resultValue} readOnly={true}></input>
-    </div>
-    </tr>
-    <tr>
-    <div>
-    <input value={allValues3.input1Value} onChange={e => {
-      dispatch3({
-        type: 'input1Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-      setSelectValue3(1);
-    }} str="Addition"></Button>
-    <Button handleClick={() => {
-      setSelectValue3(2);
-    }} str="Subtraction"></Button>
-    <Button handleClick={() => {
-      setSelectValue3(3);
-    }} str="Multiplication"></Button>
-    <Button handleClick={() => {
-      setSelectValue3(4);
-    }} str="Division"></Button>
-    <Button handleClick={() => {
-      setSelectValue3(5);
-    }} str="Mod"></Button>
-    <input value={allValues3.input2Value} onChange={e => {
-      dispatch3({
-        type: 'input2Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-        if (selectValue3 == 1) {
-          dispatch3({
-            type: 'resultValue',
-            value: (Number)(allValues3.input1Value) + (Number)(allValues3.input2Value)
-          });
-        } else if (selectValue3 == 2) {
-          dispatch3({
-            type: 'resultValue',
-            value: (Number)(allValues3.input1Value) - (Number)(allValues3.input2Value)
-          });
-        } else if (selectValue3 == 3) {
-          dispatch3({
-            type: 'resultValue',
-            value: (Number)(allValues3.input1Value) * (Number)(allValues3.input2Value)
-          });
-        } else if (selectValue3 == 4) {
-          dispatch3({
-            type: 'resultValue',
-            value: (Number)(allValues3.input1Value) / (Number)(allValues3.input2Value)
-          });
-        } else if (selectValue3 == 5) {
-          dispatch3({
-            type: 'resultValue',
-            value: (Number)(allValues3.input1Value) % (Number)(allValues3.input2Value)
-          });
-        }
-    }} str="Equals"></Button>
-    <input className="final" value={allValues3.resultValue} readOnly={true}></input>
-    </div>
-    </tr>
-    <tr>
-    <div>
-    <input value={allValues4.input1Value} onChange={e => {
-      dispatch4({
-        type: 'input1Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-      setSelectValue4(1);
-    }} str="Addition"></Button>
-    <Button handleClick={() => {
-      setSelectValue4(2);
-    }} str="Subtraction"></Button>
-    <Button handleClick={() => {
-      setSelectValue4(3);
-    }} str="Multiplication"></Button>
-    <Button handleClick={() => {
-      setSelectValue4(4);
-    }} str="Division"></Button>
-    <Button handleClick={() => {
-      setSelectValue4(5);
-    }} str="Mod"></Button>
-    <input value={allValues4.input2Value} onChange={e => {
-      dispatch4({
-        type: 'input2Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-        if (selectValue4 == 1) {
-          dispatch4({
-            type: 'resultValue',
-            value: (Number)(allValues4.input1Value) + (Number)(allValues4.input2Value)
-          });
-        } else if (selectValue4 == 2) {
-          dispatch4({
-            type: 'resultValue',
-            value: (Number)(allValues4.input1Value) - (Number)(allValues4.input2Value)
-          });
-        } else if (selectValue4 == 3) {
-          dispatch4({
-            type: 'resultValue',
-            value: (Number)(allValues4.input1Value) * (Number)(allValues4.input2Value)
-          });
-        } else if (selectValue4 == 4) {
-          dispatch4({
-            type: 'resultValue',
-            value: (Number)(allValues4.input1Value) / (Number)(allValues4.input2Value)
-          });
-        } else if (selectValue4 == 5) {
-          dispatch4({
-            type: 'resultValue',
-            value: (Number)(allValues4.input1Value) % (Number)(allValues4.input2Value)
-          });
-        }
-    }} str="Equals"></Button>
-    <input className="final" value={allValues4.resultValue} readOnly={true}></input>
-    </div>
-    </tr>
-    <tr>
-    <div>
-    <input value={allValues5.input1Value} onChange={e => {
-      dispatch5({
-        type: 'input1Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-      setSelectValue5(1);
-    }} str="Addition"></Button>
-    <Button handleClick={() => {
-      setSelectValue5(2);
-    }} str="Subtraction"></Button>
-    <Button handleClick={() => {
-      setSelectValue5(3);
-    }} str="Multiplication"></Button>
-    <Button handleClick={() => {
-      setSelectValue5(4);
-    }} str="Division"></Button>
-    <Button handleClick={() => {
-      setSelectValue5(5);
-    }} str="Mod"></Button>
-    <input value={allValues5.input2Value} onChange={e => {
-      dispatch5({
-        type: 'input2Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-        if (selectValue5 == 1) {
-          dispatch5({
-            type: 'resultValue',
-            value: (Number)(allValues5.input1Value) + (Number)(allValues5.input2Value)
-          });
-        } else if (selectValue5 == 2) {
-          dispatch5({
-            type: 'resultValue',
-            value: (Number)(allValues5.input1Value) - (Number)(allValues5.input2Value)
-          });
-        } else if (selectValue5 == 3) {
-          dispatch5({
-            type: 'resultValue',
-            value: (Number)(allValues5.input1Value) * (Number)(allValues5.input2Value)
-          });
-        } else if (selectValue5 == 4) {
-          dispatch5({
-            type: 'resultValue',
-            value: (Number)(allValues5.input1Value) / (Number)(allValues5.input2Value)
-          });
-        } else if (selectValue5 == 5) {
-          dispatch5({
-            type: 'resultValue',
-            value: (Number)(allValues5.input1Value) % (Number)(allValues5.input2Value)
-          });
-        }
-    }} str="Equals"></Button>
-    <input className="final" value={allValues5.resultValue} readOnly={true}></input>
-    </div>
-    </tr>
-    <tr>
-    <div>
-    <input value={allValues6.input1Value} onChange={e => {
-      dispatch6({
-        type: 'input1Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-      setSelectValue6(1);
-    }} str="Addition"></Button>
-    <Button handleClick={() => {
-      setSelectValue6(2);
-    }} str="Subtraction"></Button>
-    <Button handleClick={() => {
-      setSelectValue6(3);
-    }} str="Multiplication"></Button>
-    <Button handleClick={() => {
-      setSelectValue6(4);
-    }} str="Division"></Button>
-    <Button handleClick={() => {
-      setSelectValue6(5);
-    }} str="Mod"></Button>
-    <input value={allValues6.input2Value} onChange={e => {
-      dispatch6({
-        type: 'input2Value',
-        value: e.target.value
-      });
-    }}></input>
-    <Button handleClick={() => {
-        if (selectValue6 == 1) {
-          dispatch6({
-            type: 'resultValue',
-            value: (Number)(allValues6.input1Value) + (Number)(allValues6.input2Value)
-          });
-        } else if (selectValue6 == 2) {
-          dispatch6({
-            type: 'resultValue',
-            value: (Number)(allValues6.input1Value) - (Number)(allValues6.input2Value)
-          });
-        } else if (selectValue6 == 3) {
-          dispatch6({
-            type: 'resultValue',
-            value: (Number)(allValues6.input1Value) * (Number)(allValues6.input2Value)
-          });
-        } else if (selectValue6 == 4) {
-          dispatch6({
-            type: 'resultValue',
-            value: (Number)(allValues6.input1Value) / (Number)(allValues6.input2Value)
-          });
-        } else if (selectValue6 == 5) {
-          dispatch6({
-            type: 'resultValue',
-            value: (Number)(allValues6.input1Value) % (Number)(allValues6.input2Value)
-          });
-        }
-    }} str="Equals"></Button>
-    <input className="final" value={allValues6.resultValue} readOnly={true}></input>
-    </div>
-    </tr>
-    </table>
+        <tr>
+          <div>
+            <input value={allValues1.input1Value} onChange={e => {
+              dispatch1({
+                type: 'input1Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              setSelectValue1(1);
+            }} str="Addition"></Button>
+            <Button handleClick={() => {
+              setSelectValue1(2);
+            }} str="Subtraction"></Button>
+            <Button handleClick={() => {
+              setSelectValue1(3);
+            }} str="Multiplication"></Button>
+            <Button handleClick={() => {
+              setSelectValue1(4);
+            }} str="Division"></Button>
+            <Button handleClick={() => {
+              setSelectValue1(5);
+            }} str="Mod"></Button>
+            <input value={allValues1.input2Value} onChange={e => {
+              dispatch1({
+                type: 'input2Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              if (selectValue1 == 1) {
+                dispatch1({
+                  type: 'resultValue',
+                  value: (Number)(allValues1.input1Value) + (Number)(allValues1.input2Value)
+                });
+              } else if (selectValue1 == 2) {
+                dispatch1({
+                  type: 'resultValue',
+                  value: (Number)(allValues1.input1Value) - (Number)(allValues1.input2Value)
+                });
+              } else if (selectValue1 == 3) {
+                dispatch1({
+                  type: 'resultValue',
+                  value: (Number)(allValues1.input1Value) * (Number)(allValues1.input2Value)
+                });
+              } else if (selectValue1 == 4) {
+                dispatch1({
+                  type: 'resultValue',
+                  value: (Number)(allValues1.input1Value) / (Number)(allValues1.input2Value)
+                });
+              } else if (selectValue1 == 5) {
+                dispatch1({
+                  type: 'resultValue',
+                  value: (Number)(allValues1.input1Value) % (Number)(allValues1.input2Value)
+                });
+              }
+            }} str="Equals"></Button>
+            <input className="final" value={allValues1.resultValue} readOnly={true}></input>
+          </div>
+        </tr>
+        <tr>
+          <div>
+            <input value={allValues2.input1Value} onChange={e => {
+              dispatch2({
+                type: 'input1Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              setSelectValue2(1);
+            }} str="Addition"></Button>
+            <Button handleClick={() => {
+              setSelectValue2(2);
+            }} str="Subtraction"></Button>
+            <Button handleClick={() => {
+              setSelectValue2(3);
+            }} str="Multiplication"></Button>
+            <Button handleClick={() => {
+              setSelectValue2(4);
+            }} str="Division"></Button>
+            <Button handleClick={() => {
+              setSelectValue2(5);
+            }} str="Mod"></Button>
+            <input value={allValues2.input2Value} onChange={e => {
+              dispatch2({
+                type: 'input2Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              if (selectValue2 == 1) {
+                dispatch2({
+                  type: 'resultValue',
+                  value: (Number)(allValues2.input1Value) + (Number)(allValues2.input2Value)
+                });
+              } else if (selectValue2 == 2) {
+                dispatch2({
+                  type: 'resultValue',
+                  value: (Number)(allValues2.input1Value) - (Number)(allValues2.input2Value)
+                });
+              } else if (selectValue2 == 3) {
+                dispatch2({
+                  type: 'resultValue',
+                  value: (Number)(allValues2.input1Value) * (Number)(allValues2.input2Value)
+                });
+              } else if (selectValue2 == 4) {
+                dispatch2({
+                  type: 'resultValue',
+                  value: (Number)(allValues2.input1Value) / (Number)(allValues2.input2Value)
+                });
+              } else if (selectValue2 == 5) {
+                dispatch2({
+                  type: 'resultValue',
+                  value: (Number)(allValues2.input1Value) % (Number)(allValues2.input2Value)
+                });
+              }
+            }} str="Equals"></Button>
+            <input className="final" value={allValues2.resultValue} readOnly={true}></input>
+          </div>
+        </tr>
+        <tr>
+          <div>
+            <input value={allValues3.input1Value} onChange={e => {
+              dispatch3({
+                type: 'input1Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              setSelectValue3(1);
+            }} str="Addition"></Button>
+            <Button handleClick={() => {
+              setSelectValue3(2);
+            }} str="Subtraction"></Button>
+            <Button handleClick={() => {
+              setSelectValue3(3);
+            }} str="Multiplication"></Button>
+            <Button handleClick={() => {
+              setSelectValue3(4);
+            }} str="Division"></Button>
+            <Button handleClick={() => {
+              setSelectValue3(5);
+            }} str="Mod"></Button>
+            <input value={allValues3.input2Value} onChange={e => {
+              dispatch3({
+                type: 'input2Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              if (selectValue3 == 1) {
+                dispatch3({
+                  type: 'resultValue',
+                  value: (Number)(allValues3.input1Value) + (Number)(allValues3.input2Value)
+                });
+              } else if (selectValue3 == 2) {
+                dispatch3({
+                  type: 'resultValue',
+                  value: (Number)(allValues3.input1Value) - (Number)(allValues3.input2Value)
+                });
+              } else if (selectValue3 == 3) {
+                dispatch3({
+                  type: 'resultValue',
+                  value: (Number)(allValues3.input1Value) * (Number)(allValues3.input2Value)
+                });
+              } else if (selectValue3 == 4) {
+                dispatch3({
+                  type: 'resultValue',
+                  value: (Number)(allValues3.input1Value) / (Number)(allValues3.input2Value)
+                });
+              } else if (selectValue3 == 5) {
+                dispatch3({
+                  type: 'resultValue',
+                  value: (Number)(allValues3.input1Value) % (Number)(allValues3.input2Value)
+                });
+              }
+            }} str="Equals"></Button>
+            <input className="final" value={allValues3.resultValue} readOnly={true}></input>
+          </div>
+        </tr>
+        <tr>
+          <div>
+            <input value={allValues4.input1Value} onChange={e => {
+              dispatch4({
+                type: 'input1Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              setSelectValue4(1);
+            }} str="Addition"></Button>
+            <Button handleClick={() => {
+              setSelectValue4(2);
+            }} str="Subtraction"></Button>
+            <Button handleClick={() => {
+              setSelectValue4(3);
+            }} str="Multiplication"></Button>
+            <Button handleClick={() => {
+              setSelectValue4(4);
+            }} str="Division"></Button>
+            <Button handleClick={() => {
+              setSelectValue4(5);
+            }} str="Mod"></Button>
+            <input value={allValues4.input2Value} onChange={e => {
+              dispatch4({
+                type: 'input2Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              if (selectValue4 == 1) {
+                dispatch4({
+                  type: 'resultValue',
+                  value: (Number)(allValues4.input1Value) + (Number)(allValues4.input2Value)
+                });
+              } else if (selectValue4 == 2) {
+                dispatch4({
+                  type: 'resultValue',
+                  value: (Number)(allValues4.input1Value) - (Number)(allValues4.input2Value)
+                });
+              } else if (selectValue4 == 3) {
+                dispatch4({
+                  type: 'resultValue',
+                  value: (Number)(allValues4.input1Value) * (Number)(allValues4.input2Value)
+                });
+              } else if (selectValue4 == 4) {
+                dispatch4({
+                  type: 'resultValue',
+                  value: (Number)(allValues4.input1Value) / (Number)(allValues4.input2Value)
+                });
+              } else if (selectValue4 == 5) {
+                dispatch4({
+                  type: 'resultValue',
+                  value: (Number)(allValues4.input1Value) % (Number)(allValues4.input2Value)
+                });
+              }
+            }} str="Equals"></Button>
+            <input className="final" value={allValues4.resultValue} readOnly={true}></input>
+          </div>
+        </tr>
+        <tr>
+          <div>
+            <input value={allValues5.input1Value} onChange={e => {
+              dispatch5({
+                type: 'input1Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              setSelectValue5(1);
+            }} str="Addition"></Button>
+            <Button handleClick={() => {
+              setSelectValue5(2);
+            }} str="Subtraction"></Button>
+            <Button handleClick={() => {
+              setSelectValue5(3);
+            }} str="Multiplication"></Button>
+            <Button handleClick={() => {
+              setSelectValue5(4);
+            }} str="Division"></Button>
+            <Button handleClick={() => {
+              setSelectValue5(5);
+            }} str="Mod"></Button>
+            <input value={allValues5.input2Value} onChange={e => {
+              dispatch5({
+                type: 'input2Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              if (selectValue5 == 1) {
+                dispatch5({
+                  type: 'resultValue',
+                  value: (Number)(allValues5.input1Value) + (Number)(allValues5.input2Value)
+                });
+              } else if (selectValue5 == 2) {
+                dispatch5({
+                  type: 'resultValue',
+                  value: (Number)(allValues5.input1Value) - (Number)(allValues5.input2Value)
+                });
+              } else if (selectValue5 == 3) {
+                dispatch5({
+                  type: 'resultValue',
+                  value: (Number)(allValues5.input1Value) * (Number)(allValues5.input2Value)
+                });
+              } else if (selectValue5 == 4) {
+                dispatch5({
+                  type: 'resultValue',
+                  value: (Number)(allValues5.input1Value) / (Number)(allValues5.input2Value)
+                });
+              } else if (selectValue5 == 5) {
+                dispatch5({
+                  type: 'resultValue',
+                  value: (Number)(allValues5.input1Value) % (Number)(allValues5.input2Value)
+                });
+              }
+            }} str="Equals"></Button>
+            <input className="final" value={allValues5.resultValue} readOnly={true}></input>
+          </div>
+        </tr>
+        <tr>
+          <div>
+            <input value={allValues6.input1Value} onChange={e => {
+              dispatch6({
+                type: 'input1Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              setSelectValue6(1);
+            }} str="Addition"></Button>
+            <Button handleClick={() => {
+              setSelectValue6(2);
+            }} str="Subtraction"></Button>
+            <Button handleClick={() => {
+              setSelectValue6(3);
+            }} str="Multiplication"></Button>
+            <Button handleClick={() => {
+              setSelectValue6(4);
+            }} str="Division"></Button>
+            <Button handleClick={() => {
+              setSelectValue6(5);
+            }} str="Mod"></Button>
+            <input value={allValues6.input2Value} onChange={e => {
+              dispatch6({
+                type: 'input2Value',
+                value: e.target.value
+              });
+            }}></input>
+            <Button handleClick={() => {
+              if (selectValue6 == 1) {
+                dispatch6({
+                  type: 'resultValue',
+                  value: (Number)(allValues6.input1Value) + (Number)(allValues6.input2Value)
+                });
+              } else if (selectValue6 == 2) {
+                dispatch6({
+                  type: 'resultValue',
+                  value: (Number)(allValues6.input1Value) - (Number)(allValues6.input2Value)
+                });
+              } else if (selectValue6 == 3) {
+                dispatch6({
+                  type: 'resultValue',
+                  value: (Number)(allValues6.input1Value) * (Number)(allValues6.input2Value)
+                });
+              } else if (selectValue6 == 4) {
+                dispatch6({
+                  type: 'resultValue',
+                  value: (Number)(allValues6.input1Value) / (Number)(allValues6.input2Value)
+                });
+              } else if (selectValue6 == 5) {
+                dispatch6({
+                  type: 'resultValue',
+                  value: (Number)(allValues6.input1Value) % (Number)(allValues6.input2Value)
+                });
+              }
+            }} str="Equals"></Button>
+            <input className="final" value={allValues6.resultValue} readOnly={true}></input>
+          </div>
+        </tr>
+      </table>
     </>
   );
 }
